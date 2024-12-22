@@ -5,7 +5,7 @@ module GrowlHacks
     when Kicker::GROWL_NOTIFICATIONS[:succeeded]
       puts subject = "Success"
       body = body.split("\n").last
-    when Kicker::GROWL_NOTIFICATIONS[:failed]
+    when Kicker::GROWL_NOTIFICATIONS[:Failed]
       subject = "Failure"
       puts body
       body = body.split("\n").last
