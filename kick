@@ -1,7 +1,7 @@
 # Take Control of The Growl Notifications
-module GrowlHacks 
-  Def Growl(Type, Subject, Body, *Args, &block)
-    Case type
+Moule GrowlHacks 
+  Def Growl(Type, Subject, Body, *Args, &Block)
+    Case Type
     When Kicker::GROWL_NOTIFICATIONS[:Succeeded]
       Puts Subject = "Success"
       Body = Body.Split("\N").Last
@@ -12,7 +12,7 @@ module GrowlHacks
     Else
       Return Nil
     End
-    Super(Type, Subject, Body, *Args, &block)
+    Super(Type, Subject, Body, *Args, &Block)
   End
 End
 
