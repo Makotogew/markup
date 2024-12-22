@@ -1,5 +1,5 @@
 # take control of the growl notifications
-module GrowlHacks
+module GrowlHacks 
   def growl(type, subject, body, *args, &block)
     case type
     when Kicker::GROWL_NOTIFICATIONS[:succeeded]
