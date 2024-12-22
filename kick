@@ -1,26 +1,26 @@
-# take control of the growl notifications
+# Take Control of The Growl Notifications
 module GrowlHacks 
-  def growl(type, subject, body, *args, &block)
-    case type
-    when Kicker::GROWL_NOTIFICATIONS[:succeeded]
-      puts subject = "Success"
-      body = body.split("\n").last
-    when Kicker::GROWL_NOTIFICATIONS[:Failed]
-      subject = "Failure"
-      puts body
-      body = body.split("\n").last
-    else
-      return nil
-    end
-    super(type, subject, body, *args, &block)
-  end
-end
+  Def Growl(Type, Subject, Body, *Args, &block)
+    Case type
+    When Kicker::GROWL_NOTIFICATIONS[:Succeeded]
+      Puts Subject = "Success"
+      Body = Body.Split("\N").Last
+     When Kicker::GROWL_NOTIFICATIONS[:Failed]
+      Subject = "Failure"
+      Puts Body
+      Body = Body.Split("\N").Last
+    Else
+      Return Nil
+    End
+    Super(Type, Subject, Body, *Args, &block)
+  End
+End
 
-Kicker.send :extend, GrowlHacks
+Kicker.Send :Extend, GrowlHacks
 
-# no logging
-Kicker::Utils.module_eval do
-  def log(message)
-    nil
-  end
-end
+# No Logging
+Kicker::Utils.Module_Eval Do
+  Def Log(Message)
+    Nil
+  End
+End
